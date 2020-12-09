@@ -1,15 +1,11 @@
 //checkout project
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 class checkout
 {
    public static void main (String[] args)
    {
-<<<<<<< Updated upstream
-      //home page
-=======
-//home page
->>>>>>> Stashed changes
       //call keyboard
       Scanner keyboard = new Scanner(System.in);
       //variable for if statement
@@ -22,16 +18,6 @@ class checkout
          JOptionPane.showMessageDialog(null ,"Thank you for choosing Walmart");
       }
       else if (shopping.equals("no"))
-<<<<<<< Updated upstream
-      {
-         JOptionPane.showMessageDialog(null ,"Goodbye");
-      }
-      else
-      {
-         JOptionPane.showMessageDialog(null ,"Please answer with yes or no");      
-      }     
-      //input list
-=======
       {
          JOptionPane.showMessageDialog(null ,"Goodbye");
       }
@@ -39,10 +25,11 @@ class checkout
       {
          JOptionPane.showMessageDialog(null ,"Please answer with yes or no");      
       }   
-   
-         
-//Ryans code very messy
-//also input         
+
+      
+      
+      
+      
       String Systeminput;
       //input list
       JOptionPane.showMessageDialog(null ,"type done whenever your done");
@@ -51,13 +38,13 @@ class checkout
       float x, price;
       
       do{
-         //user input
-         Systeminput = JOptionPane.showInputDialog(null, "type the name of the item");
-         //ifs
-         if(Systeminput.equals("done"))
-         {
-         x = 2;
-         }
+      //user input
+      Systeminput = JOptionPane.showInputDialog(null, "type the name of the item");
+      //ifs
+      if(Systeminput.equals("done"))
+      {
+      x = 2;
+      }
       else
       {
          shoppingList.add(Systeminput);
@@ -74,10 +61,10 @@ class checkout
             System.out.println(PriceList);  
          }
          }
+
       
      //validaton
      }while(x < 2);
->>>>>>> Stashed changes
       
       
       
@@ -88,4 +75,9 @@ class checkout
       
       
    }
+
+
+
 }
+
+
