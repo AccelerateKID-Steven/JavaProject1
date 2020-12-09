@@ -29,11 +29,10 @@ class checkout
       
       
       
-      
       String Systeminput;
       //input list
       JOptionPane.showMessageDialog(null ,"type done whenever your done");
-      ArrayList<String> PriceList = new ArrayList<String>( );
+      ArrayList<Float> PriceList = new ArrayList<Float>( );
       ArrayList<String> shoppingList = new ArrayList<String>( );
       float x, price;
       
@@ -57,7 +56,7 @@ class checkout
          }
          else
          {
-            PriceList.add(Systeminput);
+            PriceList.add(Float.parseFloat(Systeminput));
             System.out.println(PriceList);  
          }
          }
@@ -65,7 +64,8 @@ class checkout
       
      //validaton
      }while(x < 2);
-      
+                  System.out.println(PriceList);  
+
       
       
       
