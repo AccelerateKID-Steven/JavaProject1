@@ -64,14 +64,18 @@ class checkout
       
      //validaton
      }while(x < 2);
-                  System.out.println(PriceList);  
-
-      
+     for(int z = 0; z < shoppingList.size(); z++)
+     {
+     System.out.println(shoppingList.get(z) + " Price: " + PriceList.get(z));
+     
+     }
+     
       
       
       
       
       //output list
+      
       
       
    }
