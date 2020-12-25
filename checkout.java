@@ -32,7 +32,7 @@ class checkout
       String Systeminput;
       //input list
       JOptionPane.showMessageDialog(null ,"type done whenever your done");
-      ArrayList<Float> PriceList = new ArrayList<Float>( );
+      ArrayList<String> PriceList = new ArrayList<String>( );
       ArrayList<String> shoppingList = new ArrayList<String>( );
       float x, price;
       
@@ -56,7 +56,7 @@ class checkout
          }
          else
          {
-            PriceList.add(Float.parseFloat(Systeminput));
+            PriceList.add(Systeminput);
             System.out.println(PriceList);  
          }
          }
@@ -66,12 +66,14 @@ class checkout
      }while(x < 2);
      for(int z = 0; z < shoppingList.size(); z++)
      {
-     System.out.println(shoppingList.get(z) + " Price: " + PriceList.get(z));
-     
+     JOptionPane.showMessageDialog(null,shoppingList.get(z) + " Price: " + PriceList.get(z));
      }
-     
-      
-      
+     int sum = 0;
+     for(int i=0; i < PriceList.size(); i++){
+     sum = sum + Integer.parseInt(PriceList.get(i));
+     }
+
+     JOptionPane.showMessageDialog(null, sum + "$ is your total price");
       
       
       //output list
