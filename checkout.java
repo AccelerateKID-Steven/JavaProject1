@@ -77,16 +77,16 @@ class checkout
       while(x < 2);
       for(int z = 0; z < shoppingList.size(); z++)
       {
-         JOptionPane.showMessageDialog(null,shoppingList.get(z) + " Price: " + PriceList.get(z));
+         JOptionPane.showMessageDialog(null,shoppingList.get(z) + " Price: " + PriceList.get(z) + "\n");
       }
      
-      int sum = 0;
+      float sum = 0;
       for(int i=0; i < PriceList.size(); i++)
       {
-         sum = sum + Integer.parseInt(PriceList.get(i));
+         sum = sum + Float.parseFloat(PriceList.get(i));
       }
 
-      JOptionPane.showMessageDialog(null, sum + "$ is your total price");
+      JOptionPane.showMessageDialog(null, "$" + sum + " is your total price");
       
       
       //output list
@@ -94,7 +94,7 @@ class checkout
       //calculate and show taxes
       if(sum > 0)
       {
-         JOptionPane.showMessageDialog(null, (sum * 0.06) + sum + "$ is your total price (including tax)");
+         JOptionPane.showMessageDialog(null, "$" + (sum * 0.06) + sum + " is your total price (including tax)");
          double totalPrice = sum * 0.06 + sum;  //totalPrice is total price with tax of 6%
          //System.out.println(totalPrice);
       
