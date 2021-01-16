@@ -75,24 +75,23 @@ class checkout
          }
          
          //calculate and show taxes
-         String tempstring1 = "";
+         String taxround = "";
          if(sum > 0)
          {
-            double totalPrice = sum * 0.06 + sum;  //totalPrice is total price with tax of 6%
-            //System.out.println(totalPrice);
-            tempstring1 = Double.toString(totalPrice);
+            double totalPrice = sum * 0.06 + sum;
+            taxround = String.format("\n$%.2f",totalPrice);
          }
          
          JOptionPane.showMessageDialog(null, tempstring + "\n$" + sum + " is your total price" + 
-         "\n" + tempstring1 + " is your total price including tax)");
+         "\n" + taxround + " is your total price including tax");
       
       }   
       
          
-      if (shopping.equals("no") || shopping.equals("No"))
-      {
-         JOptionPane.showMessageDialog(null ,"Goodbye");
-      }
+      else if (shopping.equals("no") || shopping.equals("No"))
+         {
+            JOptionPane.showMessageDialog(null ,"Goodbye");
+         }
       
       else
       {
