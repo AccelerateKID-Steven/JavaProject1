@@ -73,11 +73,13 @@ class checkout
       }
      
      
-      //validaton
+      //Output
       while(x < 2);
-      for(int z = 0; z < shoppingList.size(); z++)
+      
+      String tempstring = "Items List\n";
+      for(String shoplist : shoppingList)
       {
-         JOptionPane.showMessageDialog(null,shoppingList.get(z) + " Price: " + PriceList.get(z) + "\n");
+         tempstring += shoplist + " Price: " + PriceList + "\n";
       }
      
       float sum = 0;
@@ -85,20 +87,18 @@ class checkout
       {
          sum = sum + Float.parseFloat(PriceList.get(i));
       }
-
-      JOptionPane.showMessageDialog(null, "$" + sum + " is your total price");
-      
-      
-      //output list
       
       //calculate and show taxes
+      String tempstring1 = "";
       if(sum > 0)
       {
-         JOptionPane.showMessageDialog(null, "$" + (sum * 0.06) + sum + " is your total price (including tax)");
          double totalPrice = sum * 0.06 + sum;  //totalPrice is total price with tax of 6%
          //System.out.println(totalPrice);
-      
+         tempstring1 = Double.toString(totalPrice);
       }
+      
+      JOptionPane.showMessageDialog(null, tempstring + "\n$" + sum + " is your total price" + 
+      "\n" + tempstring1 + " is your total price including tax)");
       
    }
 
