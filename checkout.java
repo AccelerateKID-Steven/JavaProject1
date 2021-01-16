@@ -62,17 +62,23 @@ class checkout
          //Output
          while(x < 2);
          
+         int j = 0;
          String tempstring = "Items List\n";
          for(String shoplist : shoppingList)
          {
-            tempstring += shoplist + " Price: " + PriceList + "\n";
+            j = j + 1;
+            //System.out.println(j - 1);
+            tempstring += shoplist + " Price: " + PriceList.get(j - 1) + "\n";
          }
+         
         
          float sum = 0;
+         String sumround = "";
          for(int i=0; i < PriceList.size(); i++)
          {
             sum = sum + Float.parseFloat(PriceList.get(i));
          }
+         sumround = String.format("\n$%.2f",sum); //rounds sum NECESSARY or else a bug will appear
          
          //calculate and show taxes
          String taxround = "";
@@ -82,7 +88,8 @@ class checkout
             taxround = String.format("\n$%.2f",totalPrice);
          }
          
-         JOptionPane.showMessageDialog(null, tempstring + "\n$" + sum + " is your total price" + 
+         //Receipt
+         JOptionPane.showMessageDialog(null, tempstring + "\n" + sumround + " is your total price" + 
          "\n" + taxround + " is your total price including tax");
       
       }   
